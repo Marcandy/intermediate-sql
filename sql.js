@@ -16,3 +16,11 @@ JOIN Customer c ON i.CustomerId = c.CustomerId
 
 SELECT  c.FirstName, c.LastName,e.FirstName, e.LastName  FROM Customer c
 JOIN Employee e ON(e.EmployeeId = c.SupportRepId)
+
+SELECT * FROM Track t
+JOIN PlaylistTrack p ON(p.TrackId = t.TrackId)
+WHERE p.PlaylistId = 5
+
+SELECT t.Name, p.Name FROM Track t
+JOIN PlaylistTrack l ON(l.TrackId = t.TrackId)
+JOIN Playlist p ON(l.PlaylistId = p.PlaylistId)
